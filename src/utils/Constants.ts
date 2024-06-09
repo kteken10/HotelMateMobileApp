@@ -21,19 +21,19 @@ export const ONBOARDING = [
   {
     title: "onboard1",
     subtitle: "onboard1_desc",
-    image_src: require('../assets/images/vendorCar.png'),
+    image_src: require('../assets/images/ChambreBlanche.jpg'),
     bgcolor: "#FFE9DF"
   },
   {
     title: "onboard2",
     subtitle: "onboard2_desc",
-    image_src: require('../assets/images/SetupPcWork.jpg'),
+    image_src: require('../assets/images/ChambreLumineuseTapisBlanc.jpg'),
     bgcolor: "#E8EFFA"
   },
   {
     title: "onboard3",
     subtitle: "onboard3_desc",
-    image_src: require('../assets/images/BMWM3rougeBetongris.jpg'),
+    image_src: require('../assets/images/DoubleLitChambreModerne.jpg'),
     bgcolor: "#E4F8F5"
   }
 ];

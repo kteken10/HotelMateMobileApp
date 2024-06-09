@@ -1,14 +1,13 @@
 const textEs = {
-  onboard1: 'Tu Compañero de Búsqueda ITECH Definitivo',
-  onboard1_desc: 'Bienvenido al destino perfecto para encontrar tu próximo coche, dispositivo inteligente o configuración de oficina. ¡Confía en nosotros para elecciones de calidad superior!',
-  onboard2: 'Configuraciones Personalizadas Solo para Ti',
-  onboard2_desc: 'Descubre la configuración óptima y el arreglo de escritorio adaptados a tus necesidades.',
-  onboard3: 'La Última Generación de los Mejores Coches del Mundo',
-  onboard3_desc: 'Explora el pináculo de la excelencia automotriz con las últimas innovaciones y características.',
+  onboard1: 'Tu Compañero Definitivo para Encontrar Habitaciones de Hotel',
+  onboard1_desc: '¡Bienvenido/a a tu destino ideal para descubrir la habitación de hotel perfecta adaptada a tus preferencias. ¡Confía en nosotros para encontrar alojamientos de alta calidad!',
+  onboard2: 'Estancias Personalizadas Solo para Ti',
+  onboard2_desc: 'Encuentra la configuración ideal de habitación y servicios adaptados para satisfacer tus necesidades y preferencias.',
+  onboard3: 'Experimenta el Lujo en su Máxima Expresión',
+  onboard3_desc: 'Explora el epítome de la excelencia en hospitalidad con nuestras últimas ofertas y servicios premium.',
   sign_in: 'Iniciar sesión',
-  registered: 'Registrado'
+  registered: 'Registrado',
+  'phone_number':''
 };
 
-  
-  export default textEs;
-  
+export default textEs;

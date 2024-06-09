@@ -17,7 +17,7 @@ const Stack = createStackNavigator();
 const PatientPortalHeader = () => (
   <View className="mx-2 h-1/2    mt-5  ">
     {/* <View className=" py-4 w-64 h-24  rounded-xl mr-4"> */}
-      <Image source={require('../assets/images/SetupPcWork.jpg')} className="h-5/6 w-full rounded-3xl absolute" />
+      {/* <Image source={require('../assets/images/SetupPcWork.jpg')} className="h-5/6 w-full rounded-3xl absolute" /> */}
     {/* </View> */}
     {/* <Text className="text-center font-semibold leading-9 text-white text-3xl">Patient Portal</Text> */}
     {/* <LanguagePicker LanguagePickerStyle={{ right: 0 }} /> */}
