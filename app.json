@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "MobilePatient",
+    "slug": "MobilePatient",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "plugins": [
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to use Face ID."
+        }
+      ]
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Allow $(PRODUCT_NAME) to use Face ID."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "INTERNET"
+      ],
+      "package": "com.anonymous.uimobile"
+    },
+    "extra": {
+      "fhirUrl": "@env:fhirUrl"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+{
+    "react-i18n.i18nPaths": "src\\assets\\locale",
+    "typescript.tsdk": "node_modules\\typescript\\lib"
+}

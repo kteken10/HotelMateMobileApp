@@ -1,0 +1,28 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "616b755d0f4c7d2dc7a1dcc2e5427039",
+      "css": "down-open",
+      "code": 59392,
+      "src": "elusive"
+    },
+    {
+      "uid": "ccddff8e8670dcd130e3cb55fdfc2fd0",
+      "css": "down-open-1",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "fe6697b391355dec12f3d86d6d490397",
+      "css": "up-open",
+      "code": 59394,
+      "src": "fontawesome"
+    }
+  ]
+}

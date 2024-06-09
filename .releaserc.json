@@ -1,0 +1,8 @@
+{
+    "branches": ["main"],
+    "plugins": [
+        "@release-it/conventional-changelog",
+        "@release-it/npm",
+        "@release-it/github"
+    ]
+}
