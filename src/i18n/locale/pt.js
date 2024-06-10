@@ -7,7 +7,9 @@ const textPt = {
   onboard3_desc: 'Explore o epítome da excelência em hospitalidade com nossas últimas ofertas e serviços premium.',
   sign_in: 'Entrar',
   registered: 'Registrado',
-  'phone_number':''
+  phone_number: 'Número de Telefone',
+  start: 'Começar',
+  skip: 'Pular'
 };
 
 export default textPt;

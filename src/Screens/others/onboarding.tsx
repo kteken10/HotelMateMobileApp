@@ -84,7 +84,7 @@ export default function OnboardingScreen(
         titleClassName="text-white"
        title={capitalizeFirstLetter(t(isLastPage() ? "start" : "skip"))}
        onPress={onSkip}
-       className="self-center bg-secondary-600 mobile:py-3 tablet:py-3 w-full shadow-md shadow-slate-600"  
+       className="self-center bg-primary-700 mobile:py-3 tablet:py-3 w-full shadow-md shadow-slate-600"  
       />
       </View>
 
@@ -95,7 +95,7 @@ export default function OnboardingScreen(
             key={itemIndex}
             className={`
             w-3 h-3  mx-2 rounded-full
-            ${itemIndex===index ?  "bg-secondary-600 w-4 h-4":"border border-secondary-600"}
+            ${itemIndex===index ?  "bg-primary-700 w-3 h-3":"border border-secondary-600"}
             `}
           />
         ))}

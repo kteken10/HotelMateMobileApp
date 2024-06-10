@@ -7,7 +7,9 @@ const textEn = {
   onboard3_desc: 'Explore the epitome of hospitality excellence with our latest offerings and premium services.',
   sign_in: 'Sign In',
   registered: 'Registered',
-  'phone_number':''
+  phone_number: 'Phone Number',
+  start: 'Start',
+  skip: 'Skip'
 };
 
 export default textEn;

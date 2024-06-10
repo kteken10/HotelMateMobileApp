@@ -7,7 +7,9 @@ const textFr = {
   onboard3_desc: 'Explorez l\'épitome de l\'excellence en matière d\'hospitalité avec nos dernières offres et services premium.',
   sign_in: 'Se Connecter',
   registered: 'Enregistré',
-  'phone_number':''
+  phone_number: 'Numéro de Téléphone',
+  start: 'Démarrer',
+  skip: 'Passer'
 };
 
 export default textFr;
