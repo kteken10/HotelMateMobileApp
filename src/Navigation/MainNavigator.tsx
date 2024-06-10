@@ -5,7 +5,7 @@ import { RootState } from '../redux/store';
 import { LoginForm} from '../Screens/auth/login-screen';
 import { View,Image, SafeAreaView } from '../ui';
 import { LanguagePicker } from '../ui/language-picker';
-import { DrawerNavigator } from './DrawerMenu';
+
 import RegisteredForm from '../Screens/auth/registered-screen';
 import { VerificationForm } from '../Screens/auth/Verification';
 import OnboardingScreen from '../Screens/others/onboarding';
@@ -66,13 +66,14 @@ function MainNavigator() {
           {!firstOpen && (
             <Stack.Screen name="Onboarding" component={OnboardingScreen} />
           )}
+           <Stack.Screen name="Menu" component={BottomTabs}/>
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
           <Stack.Screen name="Verification" component={VerificationScreen} />
           <Stack.Screen name="RegisteredScreen" component={RegisteredScreen} /> 
         </>
       ) : (
         <>
-        <Stack.Screen name="Menu" component={BottomTabs}/>
+        {/* <Stack.Screen name="Menu" component={BottomTabs}/> */}
         {/* <Stack.Screen name="DrawerMenu" component={DrawerNavigator}/> */}
         </>
       )}

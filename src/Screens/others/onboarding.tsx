@@ -27,7 +27,8 @@ export default function OnboardingScreen(
 
   const onSkip = () => {
     dispatch(firstOpen(true));
-    console.log('Go to Auth')
+    
+   
     
     
   };

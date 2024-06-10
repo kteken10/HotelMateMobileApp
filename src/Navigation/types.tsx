@@ -6,7 +6,6 @@ export type RootStackParamList =
     Verification:undefined
     RegisteredScreen:undefined
     Dependant:undefined
-    DrawerMenu:undefined
     Menu:undefined
 
   }

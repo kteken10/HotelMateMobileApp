@@ -43,8 +43,8 @@ export const HeaderTop: React.FC<HeaderProps> = ({ title,onMessagePress,onProfil
   };
 
   return (
-    <View className="w-screen flex flex-row items-center justify-between" style={{ backgroundColor: colors.primary[50] }}>
-      <Text className="text-2xl font-semibold text-white">{title}</Text>
+    <View className="w-screen h-20   flex flex-row items-center justify-between bg-primary-700" >
+      <Text className="text-2xl font-semibold text-white mx-4">{title}</Text>
       <View className="flex flex-row items-center absolute mobile:right-20 tablet:right-20 laptop:right-28">
         <View className='flex-row right-4'>
           {isTablet && (
@@ -66,11 +66,11 @@ export const HeaderTop: React.FC<HeaderProps> = ({ title,onMessagePress,onProfil
         <View className=" ">
           <Menu>
             <MenuTrigger>
-              <Image
+              {/* <Image
                 className="image-cover bg-white mobile:w-7 mobile:h-7 tablet:w-9 tablet:h-9 laptop:w-10 laptop:h-10 laptop:bottom flex-none rounded-full border border-neutral-200"
                 source={require('../assets/images/Avatar.png')}
                 alt="Profile picture"
-              />
+              /> */}
             </MenuTrigger>
             <MenuOptions>
               <MenuOption
