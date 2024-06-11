@@ -73,7 +73,7 @@ export const ChambreHotelCard = ({ name, image_path, active, prix_par_nuit ,onCl
   </View>
 
   <View className='flex-row mt-4'>
-  <Location color={colors.neutral[300]} size={26} variant='Bulk'/>
+  <Location color={colors.neutral[300]} size={26} />
   <Text className='text-neutral-500 mr-4 ml-2'>
  {description}
   </Text>

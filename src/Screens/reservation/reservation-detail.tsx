@@ -5,6 +5,7 @@ import { ChambreHotelCard } from '../../ui/hotel-card';
 import { ChambreHotels } from '../../api/fakedata';
 import { Wifi,Car, Glass, Camera, BookSquare, Archive, Hospital, Money, MoneyAdd} from 'iconsax-react-native';
 import { colors } from '../../theme';
+import { SButton } from '../../ui/button';
 
 
 export const ReservationDetail = ({ route }) => {
@@ -31,22 +32,50 @@ export const ReservationDetail = ({ route }) => {
                    
                 }}
             />
-            <View className=' bg-white '>
+            <View className=' bg-white bottom-5 h-full'>
                 <Text className='mx-4'>
                     Amenities
                 </Text>
-                <View className=''>
+                <View className='mt-6 '>
                <View className='flex-row  w-full justify-between px-4'>
-               <Wifi color={colors.primary[700]} size={40} variant='Bulk' />
+                <View className='flex-col items-center'>
+                <Wifi color={colors.primary[700]} size={40} variant='Bulk' />
+                 <Text className='text-sm'>Wifi</Text>
+                </View>
+                <View className='flex-col items-center'>
                <Car color={colors.primary[700]} size={40}  variant='Bulk'/>
-              <Camera color={colors.primary[700]} size={40} variant='Bulk'/>
-              {/* <Archive color={colors.primary[700]} size={40} variant='Bulk'/> */}
-              <Hospital color={colors.primary[700]} size={40} variant='Bulk'/>
-              <MoneyAdd color={colors.primary[700]} size={40} variant='Bulk'/>
-            
-               
+               <Text className='text-sm'>Parking</Text>
                </View>
 
+               <View className='flex-col items-center'>
+              <Camera color={colors.primary[700]} size={40} variant='Bulk'/>
+              <Text className='text-sm'>Recorder</Text>
+              </View>
+              <View className='flex-col items-center'>
+             
+              <Hospital color={colors.primary[700]} size={40} variant='Bulk'/>
+              <Text className='text-sm'>Hospital</Text>
+              </View>
+              <View className='flex-col items-center'>
+              <MoneyAdd color={colors.primary[700]} size={40} variant='Bulk'/>
+             <Text className='text-sm'>Bank</Text>
+               </View>
+               </View>
+               
+
+
+                </View>
+
+                <View className='flex-row mt-28 mx-4  '>
+                     <Archive color={colors.primary[700]} size={40} variant='Bulk' style={{
+                        marginRight:4
+                     }}/>
+                     <SButton title={'Book now'}
+                     titleClassName='text-white'
+
+                     className='bg-primary-700 flex-1'
+                     />
+                     
 
                 </View>
 
