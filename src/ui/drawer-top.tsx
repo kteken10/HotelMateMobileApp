@@ -5,11 +5,11 @@ import { Notification as NNotification, Message as NMessage } from 'iconsax-reac
 import { styled } from "nativewind";
 import { useNavigation } from "@react-navigation/native";
 import { isTablet } from "../hooks/use-platform-info";
-import { View, Text, TouchableOpacity, Image } from ".";
-import { LanguagePicker } from "@chipsanalytics/ui-components-mobile";
+import { View, Text, TouchableOpacity } from ".";
 import { colors } from "../theme";
 import { useDispatch } from 'react-redux';
 import { authentificated} from '../redux/uiSlice'
+import { LanguagePicker } from "./language-picker";
 type HeaderProps = {
   title: string;
   onMessagePress?(): void | undefined;
@@ -43,14 +43,12 @@ export const HeaderTop: React.FC<HeaderProps> = ({ title,onMessagePress,onProfil
   };
 
   return (
-    <View className="w-screen h-20   flex flex-row items-center justify-between bg-primary-700" >
+    <View className="w-screen h-20  flex flex-row items-center justify-between bg-primary-700" >
       <Text className="text-2xl font-semibold text-white mx-4">{title}</Text>
       <View className="flex flex-row items-center absolute mobile:right-20 tablet:right-20 laptop:right-28">
         <View className='flex-row right-4'>
-          {isTablet && (
-            <LanguagePicker
-
-            />)}
+         
+            <LanguagePicker LanguagePickerStyle={{left:90,top:2}}/>
           <TouchableOpacity className=' laptop:top-1' onPress={onMessagePress}>
 
             <MessageIcon className='text-white' size={!isTablet ? 28 : 24} variant="Bold" />

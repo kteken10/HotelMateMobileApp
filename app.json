@@ -16,9 +16,9 @@
     ],
     "plugins": [
       [
-        "expo-local-authentication",
+        "expo-router",
         {
-          "faceIDPermission": "Allow $(PRODUCT_NAME) to use Face ID."
+          "origin": "http://127.0.0.1:5000"
         }
       ]
     ],

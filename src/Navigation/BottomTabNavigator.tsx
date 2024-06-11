@@ -5,9 +5,7 @@ import { Buildings, Layer, ProfileCircle } from 'iconsax-react-native';
 import { Notifications } from '../Screens/notification/notification';
 import { colors } from '../theme';
 import { Restaurant } from '../Screens/restaurant/restaurant';
-
 const Tab = createBottomTabNavigator();
-
 export const BottomTabs = () => {
   return (
     <Tab.Navigator
@@ -18,7 +16,6 @@ export const BottomTabs = () => {
         tabBarStyle: {
           height: 55
         }
-
       }}
     >
 
@@ -28,7 +25,7 @@ export const BottomTabs = () => {
         options={{
           headerShown: false,
           tabBarLabel: 'Reservation',
-          tabBarLabelStyle: { width: 80 },
+           tabBarLabelStyle: { width: 80,fontFamily:'LTSaeada-Regular' },
           tabBarIcon: ({ color, size }) => (
             <Buildings color={color} size={size} variant='Bulk' />
           ),
@@ -41,7 +38,7 @@ export const BottomTabs = () => {
         options={{
           headerShown: false,
           tabBarLabel: 'Services',
-          tabBarLabelStyle: { width: 80 },
+           tabBarLabelStyle: { width: 80,fontFamily:'LTSaeada-Regular' },
           tabBarIcon: ({ color }) => (
             <Layer color={color} size={32} variant='Bulk' />
           ),
@@ -55,7 +52,7 @@ export const BottomTabs = () => {
         options={{
           headerShown: false,
           tabBarLabel: 'Restaurant',
-          tabBarLabelStyle: { width: 80 },
+           tabBarLabelStyle: { width: 80,fontFamily:'LTSaeada-Regular' },
           tabBarIcon: ({ color, size }) => (
             <MaterialIcons name="restaurant-menu" color={color} size={size} />
           ),
@@ -69,7 +66,7 @@ export const BottomTabs = () => {
           headerShown: false,
           tabBarLabel: 'Profile',
 
-          tabBarLabelStyle: { width: 80 },
+          tabBarLabelStyle: { width: 80,fontFamily:'LTSaeada-Regular' },
           tabBarIcon: ({ color }) => (
             <ProfileCircle color={color} size={32} variant='Bulk' />
           ),
