@@ -5,8 +5,8 @@ export type RootStackParamList =
     LoginScreen:undefined
     Verification:undefined
     RegisteredScreen:undefined
-    Dependant:undefined
     Menu:undefined
+    ReservationDetail:undefined
 
   }
   declare global {

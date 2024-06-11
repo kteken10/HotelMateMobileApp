@@ -7,17 +7,20 @@ import { Import } from 'iconsax-react-native';
 import { ChambreHotels } from '../../api/fakedata';
 
 interface Chambre {
-  id: number;
+  id:string;
   name: string;
   active: boolean;
   prix_par_nuit: string;
   description: string;
   image_path: string;
+  navigation:any
 }
 
-interface ReservationProps {}
+interface ReservationProps {
+  navigation:any
+}
 
-export const Reservation = ({}: ReservationProps) => {
+export const Reservation = ({navigation}: ReservationProps) => {
   const [selectedButton, setSelectedButton] = useState<string | null>(null);
   const [chambres, setChambres] = useState<Chambre[]>([]);
 
@@ -36,33 +39,39 @@ export const Reservation = ({}: ReservationProps) => {
   };
 
   return (
-    <View className='flex flex-1 bg-white'>
+    <View className='flex flex-1 '>
       <HeaderTop title='Reservation'/>
-      <View style={{ flexDirection: 'row', backgroundColor: 'bg-neutral-200', marginTop: 6, justifyContent: 'space-between', marginHorizontal: 4, borderRadius: 20, paddingVertical: 10, paddingHorizontal: 10 }}>
+      <View className='flex-row bg-white mt-6 justify-between mx-4 rounded-3xl py-1 px-1'>
         <TouchableOpacity
-          style={selectedButton === 'Standard' ? { backgroundColor: 'white', paddingVertical: 10, alignItems: 'center', borderRadius: 20, width: '33%' } : { alignItems: 'center', paddingVertical: 10, width: '33%' }}
+          className={selectedButton === 'Standard' ? 'bg-neutral-300 py-2 items-center  rounded-3xl w-1/3' : 'items-center py-2 w-1/3 '}
           onPress={() => handleButtonPress('Standard')}
         >
-          <Text style={selectedButton === 'Standard' ? {} : {}} tx='standard'/>
+          <Text className=''>Standard</Text>
         </TouchableOpacity>  
         <TouchableOpacity
-          style={selectedButton === 'Suite' ? { backgroundColor: 'white', paddingVertical: 10, alignItems: 'center', borderRadius: 20, width: '33%' } : { alignItems: 'center', paddingVertical: 10, width: '33%' }}
+          className={selectedButton === 'Suite' ? 'bg-neutral-300 py-2 items-center   rounded-3xl w-1/3' : 'items-center py-2 w-1/3 '}
           onPress={() => handleButtonPress('Suite')}
         >
-          <Text style={selectedButton === 'Suite' ? {} : {}} tx='deluxe'/>
+          <Text className=''>Deluxe</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={selectedButton === 'Room' ? { backgroundColor: 'white', paddingVertical: 10, alignItems: 'center', borderRadius: 20, width: '33%' } : { alignItems: 'center', paddingVertical: 10, width: '33%' }}
+          className={selectedButton === 'Room' ? 'bg-neutral-300 py-2 items-center  rounded-3xl w-1/3' : 'items-center py-2 w-1/3 '}
           onPress={() => handleButtonPress('Room')}
         >
-          <Text style={selectedButton === 'Room' ? {} : {}} tx='suite'/>
+          <Text className=''>Suite</Text>
         </TouchableOpacity>
       </View>
-      
       <ScrollView className='mt-4 mx-4'>
         {ChambreHotels.map(chambre => (
           <ChambreHotelCard
+          className='px-2 py-6'
+          imageClassName='w-1/2'
             key={chambre.id}
+            onClick={()=>{
+              navigation.navigate('ReservationDetail', {
+                Chambreid: chambre.id,
+              })
+            }}
             {...chambre}
           />
         ))}

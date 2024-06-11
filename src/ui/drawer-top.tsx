@@ -46,7 +46,7 @@ export const HeaderTop: React.FC<HeaderProps> = ({ title,onMessagePress,onProfil
     <View className="w-screen h-20  flex flex-row items-center justify-between bg-primary-700" >
       <Text className="text-2xl font-semibold text-white mx-4">{title}</Text>
       <View className="flex flex-row items-center absolute mobile:right-20 tablet:right-20 laptop:right-28">
-        <View className='flex-row right-4'>
+        <View className='flex-row right-4 top-1'>
          
             <LanguagePicker LanguagePickerStyle={{left:90,top:2}}/>
           <TouchableOpacity className=' laptop:top-1' onPress={onMessagePress}>
@@ -61,42 +61,7 @@ export const HeaderTop: React.FC<HeaderProps> = ({ title,onMessagePress,onProfil
             )
           }
         </View>
-        <View className=" ">
-          <Menu>
-            <MenuTrigger>
-              {/* <Image
-                className="image-cover bg-white mobile:w-7 mobile:h-7 tablet:w-9 tablet:h-9 laptop:w-10 laptop:h-10 laptop:bottom flex-none rounded-full border border-neutral-200"
-                source={require('../assets/images/Avatar.png')}
-                alt="Profile picture"
-              /> */}
-            </MenuTrigger>
-            <MenuOptions>
-              <MenuOption
-                onSelect={() => handleMenu1()}
-                customStyles={{
-                  optionWrapper: {
-                    backgroundColor: menu1bg,
-                    shadowColor: menu1bg,
-                  }
-                }}
-              >
-                <View className="w-full h-10 flex flex-row items-center p-2">
-                  <Profile size="24" color={menu1color} variant="Outline" />
-                  <Text className="text-lg ml-2" style={{ color: menu1color }} tx="manage_account" />
-                </View>
-              </MenuOption>
-              <MenuOption onSelect={() => handleMenu2()}>
-                <View
-                  className="w-full h-10 flex flex-row items-center p-2"
-                  style={{ backgroundColor: menu2bg }}
-                >
-                  <Logout size="24" color={menu2color} variant="Outline" />
-                  <Text className="text-lg ml-2" style={{ color: menu2color }} tx="logout" />
-                </View>
-              </MenuOption>
-            </MenuOptions>
-          </Menu>
-        </View>
+        
 
       </View>
     </View>

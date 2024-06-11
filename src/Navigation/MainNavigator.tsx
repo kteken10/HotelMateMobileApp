@@ -10,6 +10,7 @@ import RegisteredForm from '../Screens/auth/registered-screen';
 import { VerificationForm } from '../Screens/auth/Verification';
 import OnboardingScreen from '../Screens/others/onboarding';
 import { BottomTabs } from './BottomTabNavigator';
+import { ReservationDetail } from '../Screens/reservation/reservation-detail';
 
 
 const Stack = createStackNavigator();
@@ -67,6 +68,7 @@ function MainNavigator() {
             <Stack.Screen name="Onboarding" component={OnboardingScreen} />
           )}
            <Stack.Screen name="Menu" component={BottomTabs}/>
+           <Stack.Screen name='ReservationDetail' component={ReservationDetail}/>
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
           <Stack.Screen name="Verification" component={VerificationScreen} />
           <Stack.Screen name="RegisteredScreen" component={RegisteredScreen} /> 
