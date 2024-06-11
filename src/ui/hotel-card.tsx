@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, TouchableOpacity, Image, View } from '.';
-import { Map, Star1 } from 'iconsax-react-native';
+import { Location, Star1 } from 'iconsax-react-native';
 import { colors } from '../theme';
 
 interface Chambre {
@@ -15,6 +15,7 @@ interface Chambre {
   list_show?:boolean
   className?:string
 }
+
 
 export const ChambreHotelCard = ({ name, image_path, active, prix_par_nuit ,onClick,imageClassName , list_show=true,className,description}: Chambre) => {
          
@@ -51,6 +52,8 @@ export const ChambreHotelCard = ({ name, image_path, active, prix_par_nuit ,onCl
           <View className='h-1 w-2/5 bg-neutral-200 self-center mt-1'></View>
   <Text className='mt-6' font='LTSaeada-Bold'>{name}</Text>
 
+
+<View className='flex-row'>
   <View className='bg-slate-100 flex-row w-2/5 justify-center items-center px-2 py-1 rounded-3xl'>
 <Text className='text-slate-600 ' font='LTSaeada-Light'>Hotel</Text>
 <View className='flex-row gap-2'>
@@ -61,8 +64,16 @@ export const ChambreHotelCard = ({ name, image_path, active, prix_par_nuit ,onCl
         </View>
   </View>
 
+
+  <View className='ml-auto bg-warning-100  items-center justify-center px-2  flex-col'>
+
+   <Text className=' text-warning-700' >{prix_par_nuit}</Text>
+   <Text className='text-sm text-warning-700'>/Nuit</Text>
+  </View>
+  </View>
+
   <View className='flex-row mt-4'>
-  <Map color={colors.neutral[300]} size={26} variant='Bulk'/>
+  <Location color={colors.neutral[300]} size={26} variant='Bulk'/>
   <Text className='text-neutral-500 mr-4 ml-2'>
  {description}
   </Text>
