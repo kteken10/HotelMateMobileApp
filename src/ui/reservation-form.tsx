@@ -5,8 +5,7 @@ import { SButton } from './button';
 import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
 
-
-export const ReservationForm = ({ amount }: { amount: number }): JSX.Element => {
+export const ReservationForm = ({ reservationData }: { reservationData: { DateEntree: Date | undefined, DateSortie: Date | undefined, MontantTotal: number } }): JSX.Element => {
     const navigation = useNavigation();
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
@@ -15,35 +14,34 @@ export const ReservationForm = ({ amount }: { amount: number }): JSX.Element => 
 
     const handleReservation = async () => {
         try {
-            console.log(firstName,lastName,phoneNumber)
             // Envoi de la requête POST à votre endpoint pour enregistrer l'utilisateur
             const response = await axios.post('https://sx99c93m-5000.use2.devtunnels.ms/clients', {
-                nom: firstName,
-                prenom: lastName,
+                firstName: firstName,
+                lastName: lastName,
                 email: email,
-                telephone: phoneNumber,
-                adresse: "",
+                phoneNumber: phoneNumber,
+                ...reservationData
             });
-            console.log(response.data)
+            console.log(response)
+
             navigation.navigate('Payment', {
-                amount: amount
+                amount: reservationData.MontantTotal
             });
         } catch (error) {
             console.error('Une erreur s\'est produite lors de l\'enregistrement de l\'utilisateur : ', error);
-           
         }
     };
 
     return (
         <View className='mt-6'>
             <View className='flex-row mb-4'>
-                <Input className='mx-4 px-4' placeholder='FirstName' onChangeText={(text)=>setFirstName(text)} value={firstName} />
+                <Input className='mx-4 px-4' placeholder='FirstName' onChangeText={(text) => setFirstName(text)} value={firstName} />
             </View>
             <View className='mb-4'>
-                <Input className='mx-4 px-4' placeholder='LastName' onChangeText={(text)=>setLastName(text)} value={lastName} />
+                <Input className='mx-4 px-4' placeholder='LastName' onChangeText={(text) => setLastName(text)} value={lastName} />
             </View>
             <View className=''>
-                <Input className='mx-4 px-4' placeholder='eg: yokolamil@gmail.com' onChangeText={(text)=>setEmail(text)} value={email} />
+                <Input className='mx-4 px-4' placeholder='eg: yokolamil@gmail.com' onChangeText={(text) => setEmail(text)} value={email} />
             </View>
             <View className='px-4 mb-4'>
                 <PhoneNumberInput onPhoneNumberChange={setPhoneNumber} />

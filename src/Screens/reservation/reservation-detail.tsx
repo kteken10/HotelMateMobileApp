@@ -27,9 +27,6 @@ export const ReservationDetail = ({ route }) => {
     };
 
     const calculateAmount = (difference_day: number, price_night: number): number => {
-       
-       
-       
         const total_amount = difference_day * price_night;
         setAmount(total_amount);
         return total_amount;
@@ -37,7 +34,6 @@ export const ReservationDetail = ({ route }) => {
   
     useEffect(() => {
         calculateDifference(checkInDate, checkOutDate);
-        console.log(priceNight)
     }, [ checkOutDate]);
 
     useEffect(() => {
@@ -45,7 +41,6 @@ export const ReservationDetail = ({ route }) => {
             const chambre = ChambreHotels.find(chambre => chambre.id === Chambreid);
             if (chambre) {
                 setPriceNight(parseInt(chambre.prix_par_nuit.replace(/\D/g, ''),10));
-               
                 calculateAmount(daysDifference, priceNight);
             }
         }
@@ -126,7 +121,7 @@ export const ReservationDetail = ({ route }) => {
                     twtitleClassName="text-primary-50 text-lg laptop:text-2xl font-medium laptop:leading-7"
                     twmodalClassName="bg-white py-4"
                 >
-                    <ReservationForm amount={amount} />
+                    <ReservationForm reservationData={{ DateEntree: checkInDate, DateSortie: checkOutDate, MontantTotal: amount }} />
                 </CustomAlert>
             </View>
         </View>
