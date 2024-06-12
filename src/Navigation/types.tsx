@@ -7,6 +7,7 @@ export type RootStackParamList =
     RegisteredScreen:undefined
     Menu:undefined
     ReservationDetail:undefined
+    Payment:any
 
   }
   declare global {

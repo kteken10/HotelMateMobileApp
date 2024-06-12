@@ -14,6 +14,7 @@ interface Chambre {
   description: string;
   image_path: string;
   navigation:any
+  stars:number
 }
 
 interface ReservationProps {

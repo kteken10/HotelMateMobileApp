@@ -11,6 +11,7 @@ import { VerificationForm } from '../Screens/auth/Verification';
 import OnboardingScreen from '../Screens/others/onboarding';
 import { BottomTabs } from './BottomTabNavigator';
 import { ReservationDetail } from '../Screens/reservation/reservation-detail';
+import {  PaymentScreen } from '../Screens/payment/payment';
 
 
 const Stack = createStackNavigator();
@@ -69,6 +70,7 @@ function MainNavigator() {
           )}
            <Stack.Screen name="Menu" component={BottomTabs}/>
            <Stack.Screen name='ReservationDetail' component={ReservationDetail}/>
+           <Stack.Screen name='Payment' component={PaymentScreen}/>  
           <Stack.Screen name="LoginScreen" component={LoginScreen} />
           <Stack.Screen name="Verification" component={VerificationScreen} />
           <Stack.Screen name="RegisteredScreen" component={RegisteredScreen} /> 

@@ -14,10 +14,11 @@ interface Chambre {
   imageClassName?:string
   list_show?:boolean
   className?:string
+  stars:number
 }
 
 
-export const ChambreHotelCard = ({ name, image_path, active, prix_par_nuit ,onClick,imageClassName , list_show=true,className,description}: Chambre) => {
+export const ChambreHotelCard = ({ name, image_path, active, prix_par_nuit ,onClick,imageClassName , list_show=true,className,description,stars}: Chambre) => {
          
   
   return (
@@ -42,8 +43,6 @@ export const ChambreHotelCard = ({ name, image_path, active, prix_par_nuit ,onCl
       
 }
 
-   
-     
       </View>
       
       {!list_show&&(
@@ -71,7 +70,6 @@ export const ChambreHotelCard = ({ name, image_path, active, prix_par_nuit ,onCl
    <Text className='text-sm text-warning-700'>/Nuit</Text>
   </View>
   </View>
-
   <View className='flex-row mt-6'>
   <Location color={colors.neutral[300]} size={26} />
   <Text className='text-neutral-500 text-sm mr-4 ml-2 flex-1'>

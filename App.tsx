@@ -51,7 +51,6 @@ export default function App() {
       animationDuration={800}
       type='success'
      floating={true} 
-  
      titleStyle={{color: 'white'}}
     // duration={3000}
     

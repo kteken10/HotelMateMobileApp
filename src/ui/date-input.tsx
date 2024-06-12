@@ -6,8 +6,6 @@ import { View ,Text, TouchableOpacity} from '.';
 import { CalendarDateIcon } from '../assets/icons';
 import { capitalizeFirstLetter } from '../utils/string';
 import BoxIcon from './box-icon';
-
-
 interface Props {
   value?: Date;
   label?: string;
