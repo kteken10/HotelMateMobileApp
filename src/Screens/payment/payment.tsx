@@ -10,16 +10,18 @@ export const PaymentScreen = ({ route }) => {
 
     return (
         <View className='flex flex-1 px-4 py-4 bg-white'>
-
+           <View className='mt-4'>
+           <Image source={require('../../assets/images/keyce.png')} className={`rounded-xl h-28 w-1/4 ml-auto `} />
+           </View>
             <View className='h-14 border-b border-neutral-300 mt-20'>
                 <Text className=''>Payment Method</Text>
             </View>
 
-            <View className='mt-4'>
-                <Image source={require('../../assets/images/payment.png')} className={`rounded-xl h-52 `} />
+            <View className='mt-4 border border-neutral-200 rounded-3xl'>
+                <Image source={require('../../assets/images/payment.png')} className={`rounded-xl h-52 w-3/4 self-center `} />
             </View>
 
-            <View className='flex-col mx-4'>
+            <View className='flex-col mx-4 mt-10'>
                 <View className='flex-row justify-between'>
                     <Text className='text-neutral-400'>Sous Total</Text>
                     <Text className='text-neutral-400'>{amount}Fcfa</Text>
@@ -36,7 +38,7 @@ export const PaymentScreen = ({ route }) => {
             </View>
 
             <View>
-                <View className='flex-row mt-60 mx-4'>
+                <View className='flex-row mt-28 mx-4'>
                     <SButton
                         title={'Pay now'}
                         titleClassName='text-white'
