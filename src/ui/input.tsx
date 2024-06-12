@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View } from '.';
 import { TextInput as NTextInput } from 'react-native';
 import { styled } from 'nativewind';
+import { colors } from '../theme';
 
 interface InputProps {
   placeholder?: string;
@@ -30,11 +31,16 @@ export const Input: React.FC<InputProps> = ({ placeholder, onChangeText,defaultV
   return (
     <View className={isInputFocused ? focusedStyles : defaultStyles}>
       <STextInput
+      
        onFocus={() => {
         setIsInputFocused(true);
        
       }}
       className='w-full'
+      placeholderTextColor={
+        colors.neutral[300]
+      }
+      
       onBlur={() => setIsInputFocused(false)}
        
         placeholder={placeholder}

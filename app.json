@@ -14,14 +14,7 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "plugins": [
-      [
-        "expo-router",
-        {
-          "origin": "http://127.0.0.1:5000"
-        }
-      ]
-    ],
+   
     "ios": {
       "supportsTablet": true,
       "infoPlist": {

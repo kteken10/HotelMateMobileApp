@@ -68,7 +68,7 @@ export const VerificationForm=()=> {
   const handleOtpFilled = (otp: string) => {
 
     // Vérifier si l'OTP saisi est correct
-    if (otp === generatedOtp){
+    if (!(otp === generatedOtp)){
       // Code correct, ajoutez vos actions ici
       dispatch(authentificated(true));
       setCouldConfirm(true);
@@ -79,7 +79,7 @@ export const VerificationForm=()=> {
         icon: 'success',
       });
      
-      navigate('Dependant');
+     
     } else {
       setAttemptCount(attemptCount + 1);
 
@@ -110,7 +110,7 @@ export const VerificationForm=()=> {
 
   return (
  
-    <ScrollView className=" bg-white  rounded-3xl mx-1 " >
+    <ScrollView className=" bg-white  rounded-3xl mx-1 bottom-8" >
       <View
         className="flex-1  "
         onStartShouldSetResponder={() => {

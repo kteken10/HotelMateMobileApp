@@ -48,7 +48,7 @@ export const ChambreHotelCard = ({ name, image_path, active, prix_par_nuit ,onCl
       
       {!list_show&&(
        
-        <View className='flex bg-white  rounded-3xl bottom-5 px-6 '>
+        <View className='flex bg-white  rounded-3xl bottom-5 px-4 '>
           <View className='h-1 w-2/5 bg-neutral-200 self-center mt-1'></View>
   <Text className='mt-6' font='LTSaeada-Bold'>{name}</Text>
 
@@ -65,16 +65,16 @@ export const ChambreHotelCard = ({ name, image_path, active, prix_par_nuit ,onCl
   </View>
 
 
-  <View className='ml-auto bg-warning-100  items-center justify-center px-2  flex-col'>
+  <View className='ml-auto bg-warning-100  items-center justify-center px-2  rounded-3xl flex-col'>
 
    <Text className=' text-warning-700' >{prix_par_nuit}</Text>
    <Text className='text-sm text-warning-700'>/Nuit</Text>
   </View>
   </View>
 
-  <View className='flex-row mt-4'>
+  <View className='flex-row mt-6'>
   <Location color={colors.neutral[300]} size={26} />
-  <Text className='text-neutral-500 mr-4 ml-2'>
+  <Text className='text-neutral-500 text-sm mr-4 ml-2 flex-1'>
  {description}
   </Text>
 

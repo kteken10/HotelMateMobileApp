@@ -5,6 +5,9 @@ import { Buildings, Layer, ProfileCircle } from 'iconsax-react-native';
 import { Notifications } from '../Screens/notification/notification';
 import { colors } from '../theme';
 import { Restaurant } from '../Screens/restaurant/restaurant';
+import { LoginScreen } from './MainNavigator';
+import { Login } from '../Screens/auth/login';
+
 const Tab = createBottomTabNavigator();
 export const BottomTabs = () => {
   return (
@@ -61,7 +64,7 @@ export const BottomTabs = () => {
 
       <Tab.Screen
         name="Profile"
-        component={Notifications}
+        component={Login}
         options={{
           headerShown: false,
           tabBarLabel: 'Profile',

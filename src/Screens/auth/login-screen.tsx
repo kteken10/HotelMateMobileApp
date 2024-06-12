@@ -10,8 +10,9 @@ import { CredentialContext } from "../../contexts";
 import { Key } from "iconsax-react-native";
 // import DateInput from "../../ui/date-input";
 import PageHeader from "../../ui/page-header";
-import { View, ScrollView, Input} from "../../ui";
+import { View, ScrollView, Input,Text} from "../../ui";
 import { PhoneNumberInput } from "../../ui/phone-input";
+import { colors } from "../../theme";
 export const LoginForm = () => {
   const { t } = useTranslation();
   const navigation = useNavigation();
@@ -41,7 +42,7 @@ export const LoginForm = () => {
   };
  
   return (
-    <ScrollView className=" bg-white  rounded-3xl mx-1 " >
+    <ScrollView className=" bg-white  rounded-3xl mx-1 bottom-8 " >
       <View
         className="px-4  "
         onStartShouldSetResponder={() => {
@@ -53,22 +54,31 @@ export const LoginForm = () => {
           <View className="flex-1 justify-center  ">
             <PageHeader
               className="mb-8"
-              icon={<Key color="green" size={32} variant="Bulk">
+              icon={<Key color={colors.primary[700]} size={32} variant="Bulk">
 
               </Key>}
               title={capitalizeFirstLetter(t("login"))}
-              titleClassName="text-secondary-600"
+              titleClassName="text-primary-700"
               // message={t("login_message") + ""}
             />
             <View>
-            <PhoneNumberInput
+            {/* <PhoneNumberInput
         label={capitalizeFirstLetter(t("phone_number"))}
         onPhoneNumberChange={(number: string) => {
           setPhoneNumber(number);
           console.log(number)
         }}
-      />
-    <Input className="mt-4 px-4"/>
+      /> */}
+     <Text
+      font='LTSaeada-Medium' className= {`mobile:text-sm tablet:text-lg laptop:text-lg mt-4 text-gray-500   font-medium `}>
+     email
+            </Text>
+    <Input className=" px-4" placeholder='eg: yokolamil@gmail.com'/>
+    <Text
+      font='LTSaeada-Medium' className= {`mobile:text-sm tablet:text-lg laptop:text-lg mt-4 text-gray-500   font-medium `}>
+     Mot de passe
+            </Text>
+    <Input className=" px-4" placeholder='************'/>
     
             </View>
           </View>
@@ -76,14 +86,14 @@ export const LoginForm = () => {
             <SButton
               title={capitalizeFirstLetter(t("sign_in"))}
               // disabled={disabled}
-              className="self-center mobile:py-3 bg-secondary-600 tablet:py-3 w-full mb-4  rounded-3xl"
+              className="self-center mobile:py-3 bg-primary-700 tablet:py-3 w-full mb-4  rounded-3xl"
               onPress={signInWithPhoneNumber}
               titleClassName={disabled ? "text-white" : "text-white"}
             />
             <SButton
               title={capitalizeFirstLetter(t("registered"))}
-              className="self-center w-full"
-              titleClassName="text-secondary-600"
+              className="self-center w-full mb-4"
+              titleClassName="text-primary-700 "
               onPress={gotoRegisteredScreen}
             />
           </View>
