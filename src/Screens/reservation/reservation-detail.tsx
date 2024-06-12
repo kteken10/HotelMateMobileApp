@@ -38,7 +38,7 @@ export const ReservationDetail = ({ route }) => {
     useEffect(() => {
         calculateDifference(checkInDate, checkOutDate);
         console.log(priceNight)
-    }, [checkInDate, checkOutDate]);
+    }, [ checkOutDate]);
 
     useEffect(() => {
         if (daysDifference > 0) { 

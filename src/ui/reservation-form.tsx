@@ -4,7 +4,7 @@ import { PhoneNumberInput } from './phone-input';
 import { SButton } from './button';
 import { useNavigation } from '@react-navigation/native';
 import axios from 'axios';
-import { l } from 'i18n-js';
+
 
 export const ReservationForm = ({ amount }: { amount: number }): JSX.Element => {
     const navigation = useNavigation();
@@ -24,9 +24,7 @@ export const ReservationForm = ({ amount }: { amount: number }): JSX.Element => 
                 telephone: phoneNumber,
                 adresse: "",
             });
-            console.log(response)
-
-            
+            console.log(response.data)
             navigation.navigate('Payment', {
                 amount: amount
             });
